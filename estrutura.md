@@ -28,6 +28,7 @@ TABLE: directories
 2. Árvore de Directórios do Site
 
 / (Raiz)
+/index.php (Raiz do projecto)
 ├── estrutura.md
 ├── shared/
 │   ├── config/
