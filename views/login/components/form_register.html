@@ -1,0 +1,34 @@
+<!-- /views/login/components/form_register.html -->
+<form id="form-register" class="space-y-5">
+    <div>
+        <label for="reg-username" class="block text-sm font-medium text-gray-400 mb-1">Escolhe um Username</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fa-solid fa-user-plus text-gray-500"></i>
+            </div>
+            <input type="text" id="reg-username" name="username" required autocomplete="off"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-gray-900 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors sm:text-sm">
+        </div>
+        <p class="text-xs text-gray-500 mt-1">O username é único e será usado para o teu login.</p>
+    </div>
+
+    <div>
+        <label for="reg-password" class="block text-sm font-medium text-gray-400 mb-1">Cria a tua Palavra-passe</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fa-solid fa-key text-gray-500"></i>
+            </div>
+            <input type="password" id="reg-password" name="password" required autocomplete="off"
+                class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-gray-900 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors sm:text-sm">
+        </div>
+    </div>
+
+    <button type="submit" id="btn-submit-register" class="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:ring-offset-gray-900 transition-colors">
+        <span>Registar Conta</span>
+        <i class="fa-solid fa-circle-notch fa-spin hidden ml-2 mt-0.5" id="spinner-register"></i>
+    </button>
+
+    <div class="text-center mt-4 text-sm text-gray-400">
+        Já tens conta? <a href="#" id="toggle-to-login" class="font-medium text-green-400 hover:text-green-300 transition-colors">Fazer Login</a>
+    </div>
+</form>

@@ -1,0 +1,16 @@
+# /.htaccess
+
+# Ativar a reescrita de URLs
+RewriteEngine On
+
+# Se o ficheiro ou diretório existir fisicamente (ex: main.js, imagens, css), serve-o normalmente.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Caso contrário, redireciona tudo de forma invisível para o Router (index.php)
+RewriteRule ^ index.php [QSA,L]
+
+# (Opcional mas recomendado) Bloquear acesso direto a ficheiros com extensão .php nas views para forçar passagem pelo router
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.php\ HTTP/
+RewriteCond %{REQUEST_URI} !^/index\.php$
+RewriteRule ^ - [F,L]
