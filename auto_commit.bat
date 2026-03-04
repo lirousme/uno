@@ -14,3 +14,4 @@ echo Enviando para o GitHub...
 git push -u origin %BRANCH%
 
 echo Concluido.
+pause
